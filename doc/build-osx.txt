@@ -41,7 +41,14 @@ sudo port install boost db48 openssl miniupnpc
 Optionally install qrencode (and set USE_QRCODE=1):
 sudo port install qrencode
 
-4.  Now you should be able to build OWOd:
+4. brew install gcc
+
+5. cd /src/leveldb
+chmod +x build_detect_platform
+make clean
+make libleveldb.a libmemenv.a 
+
+6. Now you should be able to build OWOd:
 
 cd OWO/src
 make -f makefile.osx
